@@ -1,0 +1,10 @@
+# XtraORdinary
+Cryptography (150 points)
+## Description
+Check out my new, never-before-seen method of encryption! I totally invented it myself. I added so many for loops that I don't even know what it does. It's extraordinarily secure!
+
+[output.txt](./output.txt)
+
+[encrypt.py](./encrypt.py)
+
+## Solution

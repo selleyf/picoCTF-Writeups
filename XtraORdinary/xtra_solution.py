@@ -18,9 +18,10 @@ for key1 in random_strs:
                     ctxt = encrypt(byte_string, key1)
                     ctxt = encrypt(ctxt, key2)
                     ctxt = encrypt(ctxt, key3)
+                    #ctxt = encrypt(ctxt, key4)
+                    #ctxt = encrypt(ctxt, key5)
                     key = encrypt(b'picoCTF',ctxt[:7])
                     print(key.decode("ASCII"))
                     ctxt = encrypt(ctxt, key)
-                    #ctxt = encrypt(ctxt, key4)
-                    #ctxt = encrypt(ctxt, key5)
                     print(ctxt.decode("ASCII")) 
+

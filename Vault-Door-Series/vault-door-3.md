@@ -10,7 +10,7 @@ First,
 String userInput = scanner.next();
 String input = userInput.substring("picoCTF{".length(),userInput.length()-1);
 ```
-asks for keyboard input and strips it from ```picoCTF{``` and ```}```. Then ```checkPassword``` checks that certain characters of the input string match certain certain of the string 
+asks for keyboard input and strips it from ```picoCTF{``` and ```}```. Then ```checkPassword``` checks that certain characters of the input string match certain characters of the string 
 ```"jU5t_a_sna_3lpm12g94c_u_4_m7ra41"```, according to this rule:
 
 ```java
@@ -28,7 +28,7 @@ for (i=31; i>=17; i-=2) {
 }
 String s = new String(buffer);
 ```
-From this we can deduce the the correct input string with this Python code:
+Inverting the logic, we can deduce the correct input string with this Python script:
 
 ```python
 result_string = "jU5t_a_sna_3lpm12g94c_u_4_m7ra41"
@@ -43,5 +43,5 @@ for i in range(31, 16, -2):
     flag[i] = result_string[i]
 print('picoCTF{' + ''.join(flag) + '}')
 ```
-This gives the flag:
+The flag:
 > picoCTF{jU5t_a_s1mpl3_an4gr4m_4_u_c79a21}

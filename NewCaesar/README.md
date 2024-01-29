@@ -8,7 +8,7 @@ We found a brand new type of encryption, can you break the secret code? (Wrap wi
    
    1.1 Note that ```ALPHABET``` is the string ```"abcdefghijklmnop"```.
    
-   1.2 ```b16_encode(plain)```: for each character ```c``` of the plaintext ```plain```, it computes the 8-bit ASCII representation, takes the first four digits, converts it to decimal and takes the character of corresponding index from ```ALPHABET``` ; similarly for the last four digits. E.g.
+   1.2 ```b16_encode(plain)```: for each character ```c``` of the plaintext ```plain```, it computes the UTF-8 encoding, takes the first four digits, converts it to decimal and takes the character of corresponding index from ```ALPHABET``` ; similarly for the last four digits. E.g.
 
    'p' -> 01110000 -> 0111, 0000 -> 7, 0 -> 'h', 'a'
 

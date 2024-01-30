@@ -88,7 +88,7 @@ python_code = java_code.replace('password.charAt(', 'flag[').replace(')', ']').r
 print(python_code)
 ```
 
-we can use it to create a script which assign characters to a string and thus building flag:
+we can use it to create a script which assign characters to a string and thus builds the flag:
 
 ```python
 flag = ['']*32
@@ -130,6 +130,8 @@ flag[31] = '4'
 print('picoCTF{' + ''.join(flag) + '}')
 ```
 The flag:
-> picoCTF{d35cr4mbl3_tH3_cH4r4cT3r5_f6daf4}
+```
+picoCTF{d35cr4mbl3_tH3_cH4r4cT3r5_f6daf4}
+```
 
 

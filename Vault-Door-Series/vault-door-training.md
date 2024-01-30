@@ -17,6 +17,7 @@ asks for keyboard input and strips it from ```picoCTF{``` and ```}```. Then ```c
 ```java
 "w4rm1ng_Up_w1tH_jAv4_3808d338b46"
 ```
-so the flag is
-
-> picoCTF{w4rm1ng_Up_w1tH_jAv4_3808d338b46}
+so the flag is:
+```
+picoCTF{w4rm1ng_Up_w1tH_jAv4_3808d338b46}
+```

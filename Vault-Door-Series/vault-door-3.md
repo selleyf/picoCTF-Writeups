@@ -44,4 +44,6 @@ for i in range(31, 16, -2):
 print('picoCTF{' + ''.join(flag) + '}')
 ```
 The flag:
-> picoCTF{jU5t_a_s1mpl3_an4gr4m_4_u_c79a21}
+```
+picoCTF{jU5t_a_s1mpl3_an4gr4m_4_u_c79a21}
+```

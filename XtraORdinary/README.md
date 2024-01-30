@@ -37,7 +37,7 @@ Check out my new, never-before-seen method of encryption! I totally invented it 
 
 2. The important thing to realize is that XOR with the same key applied twice is the identity operation: ``` (a ^ b) ^ b = a```.
 
-   First, ```encrypt(encrypt(ctxt, random_str), random_str) = ctxt```. This means that from the point of decoding, the only thing that matters if ```ctxt``` was encrypted with ```random_str``` odd or even times: in the even case, we get ```ctxt```, in the odd case we get ```encrypt(ctxt, random_str)``` from which we can get back ```ctxt = encrypt(encrypt(ctxt, random_str), random_str)```.
+   This implies that ```encrypt(encrypt(ctxt, random_str), random_str) = ctxt```. This means that from the point of decoding, the only thing that matters if ```ctxt``` was encrypted with ```random_str``` odd or even times: in the even case, we get ```ctxt```, in the odd case we get ```encrypt(ctxt, random_str)``` from which we can get back ```ctxt = encrypt(encrypt(ctxt, random_str), random_str)```.
 
    So we need try every combination ```encrypt(...(encrypt(encrypt(ctxt, random_str_0), random_str_1),... random_str_j)``` for ```random_str_i in random_strs, i <= j = 0,...,4``` (notice that we have 5 different random strings.)
 

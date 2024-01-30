@@ -30,7 +30,7 @@ flag = ''
 for i in range(8):
     flag += chr(my_bytes[i])
 for i in range(8,16):
-    flag += bytes.fromhex(my_bytes[i]).decode("ASCII") 
+    flag += chr(int(my_bytes[i], 16)) 
 for i in range(16,24):
     flag += chr(int(my_bytes[i], 8))
 for i in range(24,32):

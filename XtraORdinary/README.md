@@ -41,7 +41,7 @@ Check out my new, never-before-seen method of encryption! I totally invented it 
 
    So we need try every combination ```encrypt(...(encrypt(encrypt(ctxt, random_str_0), random_str_1),... random_str_j)``` for ```random_str_i in random_strs, i <= j = 0,...,4``` (notice that we have 5 different random strings.)
 
-   How do we know if we got ```ctxt```? Take the first 7 characters and encrypt "picoCTF" with it. This will give a guess for the key, since ```encrypt("picoCTF", "secret[:7]") = key```, as we hope that ```encrypt(key, "secret[:7]") = "picoCTF"``` (notice that ```encrypt``` is symmetric in its two arguments -provided that their length is the same-, as the bitwise XOR operation is such.) Notice that we are also hoping for the key to have 7 characters. We decode ```ctxt``` with our guess for the key: ```ptxt = encrypt(ctxt, key)```, since ```ctxt = encrypt(ptxt, key)```.
+   How do we know if we got ```ctxt```? Take the first 7 characters and encrypt "picoCTF" with it. This will give a guess for the key, since ```encrypt("picoCTF", flag[:7]) = key```, as we hope that ```encrypt(key, flag[:7]) = "picoCTF"``` (notice that ```encrypt``` is symmetric in its two arguments -provided that their length is the same-, as the bitwise XOR operation is such.) Notice that we are also hoping for the key to have 7 characters. We decode ```ctxt``` with our guess for the key: ```ptxt = encrypt(ctxt, key)```, since ```ctxt = encrypt(ptxt, key)```.
 
    Finally we comb through the results to find something that looks like a flag.
 

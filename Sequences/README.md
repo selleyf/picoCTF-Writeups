@@ -18,9 +18,9 @@ def m_func(i):
 
     return 55692*m_func(i-4) - 9549*m_func(i-3) + 301*m_func(i-2) + 21*m_func(i-1)
 ```
-A quick fix would be to compute the return value iteraitely, not recursively:
+A quick fix would be to compute the return value iteratively, not recursively:
 ```python
-def m_func_1(i):
+def m_func(i):
     v = [1, 2, 3, 4]
 
     if i < 4:
@@ -69,6 +69,10 @@ D = \begin{bmatrix}-21 & 0 & 0 & 0\\0 & 12 & 0 & 0 \\ 0 & 0 & 13 & 0\\ 0 & 0 & 0
 \text{ } S^{-1} = \begin{bmatrix} \frac{-13}{209} & \frac{581}{42636} & \frac{-7}{7106} & \frac{1}{42636} \\ \frac{1547}{55} & \frac{-409}{165} & \frac{-3}{55} & \frac{1}{165} \\
 \frac{-63}{2} & \frac{405}{136} & \frac{1}{17} & \frac{-1}{136} \\ \frac{819}{190} & \frac{-369}{760} & \frac{-1}{190} & \frac{1}{760} \end{bmatrix}
 ```
+I will not get into to math behind the computation of these three matrices, for a detailed explanation see 
+
+https://en.wikipedia.org/wiki/Diagonalizable_matrix#How_to_diagonalize_a_matrix 
+
 To control precision, I used the ```gmpy2``` library, in particular ```mpz``` type for the representation of the elements of $D^{i - 3}$ and ```mpq``` for the elements of $S^{-1}$:
 ```python
 def m_func(i):
@@ -98,6 +102,6 @@ def m_func(i):
 
     return v_imin3[3]
 ```
-The function call ```m_func(ITERS)``` took ```2.878s``` for me.
+The function call ```m_func(ITERS)``` took ```2.878s``` for me - the implementation in [sequences_improved.py](./sequences_improved.py) calculates this run time too.
 
 
